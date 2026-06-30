@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f4faff;
+  --color-surface-dim: #ccdce7;
+  --color-surface-bright: #f4faff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #e7f6ff;
+  --color-surface-container: #e0f0fb;
+  --color-surface-container-high: #daebf5;
+  --color-surface-container-highest: #d5e5ef;
+  --color-on-surface: #0e1d25;
+  --color-on-surface-variant: #524340;
+  --color-inverse-surface: #23323a;
+  --color-inverse-on-surface: #e3f3fd;
+  --color-outline: #85736f;
+  --color-outline-variant: #d7c2bd;
+  --color-primary: #894f42;
+  --color-primary-container: #f8ad9d;
+  --color-accent-pastel: #f8ad9d;
+  --color-on-primary-container: #753f33;
+  --color-secondary: #3e6750;
+  --color-secondary-container: #bdeacd;
+  --color-on-secondary-container: #426b54;
+  --color-tertiary: #57615c;
+  --color-tertiary-container: #b8c2bc;
+  
+  --font-hanken: "Hanken Grotesk", sans-serif;
+  --radius-pinterest: 2rem;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-hanken), "Hanken Grotesk", sans-serif;
+    background-color: var(--color-surface-bright);
+    color: var(--color-on-surface);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphism utility */
+.glassmorphic {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glassmorphic-dark {
+  background: rgba(14, 29, 37, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d5e5ef;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bdeacd;
+}
+
+/* Smooth layout and masonry-like multi-columns */
+.masonry-grid {
+  column-count: 2;
+  column-gap: 1rem;
+}
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 4;
+  }
+}
+@media (min-width: 1280px) {
+  .masonry-grid {
+    column-count: 5;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}

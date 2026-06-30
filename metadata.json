@@ -1,0 +1,8 @@
+{
+  "name": "Pinterest Landing Page",
+  "description": "An interactive Pinterest-inspired visual discovery and curation experience featuring a serene pastel palette, flexible exploration grids, and boards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
